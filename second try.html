@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+<link rel="stylesheet" type="text/css" href="try2.css">
+<link rel="stylesheet" href="https://stackpath.booststrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <head>
+  <title> The Environment </title>
+</head>
+<body>  
+  <div id="flexi">
+  <audio id="audio" loop>
+    <source src="wiw.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="playPauseBTN" onclick="playPause()" class="abcdef"> ►</button>
+   
+   
+  <button onclick="stop()" class="abcde"> ▋</button>
+</div>
+<script type="text/javascript">
+  var audio = document.getElementById('audio');
+var playPauseBTN = document.getElementById('playPauseBTN');
+var count = 0;
+
+function playPause(){
+  if(count == 0){
+    count = 1;
+    audio.play();
+    playPauseBTN.innerHTML = "⏸";
+  }else{
+    count = 0;
+    audio.pause();
+    playPauseBTN.innerHTML = " ►";
+  }
+
+}
+
+function stop(){
+  playPause()
+  audio.pause();
+  audio.currentTime = 0;
+  playPauseBTN.innerHTML = " ►";
+}
+
+</script> 
+  <header id=header>
+
+    <a href="#title" class="title">The environment </a>
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#section1">Environment</a></li>
+      <li><a href="#section2">News</a></li>
+      <li><a href="#section3"> Tips and advice </a></li>
+      <li><a href="#section5">About us</a></li>
+      <li><a href="#section6">Music</a></li>
+    </ul>
+  </header>
+  <section>
+    <h2 id="text"><span>It's time to clean</span><br>The nature</h2> 
+
+    <img src="bird1.png" id="bird1">
+    <img src="bird2.png" id="bird2">
+    <img src="forest.png" id="forest">
+    <a href="#section1" id="btn">Explore</a>
+    <img src="rocks.png" id="rocks">
+    <img src="water.png" id="water">
+  </section>
+  <script >
+    let text = document.getElementById('text');
+    let bird1 = document.getElementById('bird1');
+    let bird2 = document.getElementById('bird2');
+    let btn = document.getElementById('btn');
+    let rocks = document.getElementById('rocks');
+    let forest = document.getElementById('forest');
+    let water = document.getElementById('water'); 
+    let header = document.getElementById('header');
+
+    window.addEventListener('scroll', function(){
+      let value = window.scrollY;
+      text.style.top = 50+ value * -0.5 + '%';
+      bird1.style.top = value * -1.5 + 'px';
+      bird1.style.left = value * 2 + 'px';
+      bird2.style.top = value * -1.5 + 'px';
+      bird2.style.left = value * -5 + 'px';
+      btn.style.marginTop = value * .5 + 'px';
+      rocks.style.top = value * -0.12  + 'px';
+      forest.style.top = value * -0.15 + 'px';
+      header.style.top = value * 0.5 + 'px';
+    })
+  </script>
+  <div id=section1>
+    <div class="container">
+
+        <div class="content-wrapper">
+          <div class="section section-one" id=1>
+            <div>
+              <div>
+                <video src="rabii.mp4" width="1100" height="550" controls></video> 
+              </div>
+              <div style="font-weight: 100; font-size: 30px; text-decoration: none; padding-top: 620px; margin: auto; color: #fff" >
+                Credits go to Rabii Ben Brahim
+                <div class="social-links" style="padding-top: 680px; margin-left: -20px;">
+                  <a href="https://www.facebook.com/thedreamerwildandfree" class="fb"><i class="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/thedreamerwildandfree/" class="fb"><i class="fab fa-instagram"></i></a>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      <div>
+        <img src="123456789.png">
+      </div>
+
+      <div class="content-wrapper">
+        <div class="section section-two" id=2>
+          <div>
+            <div>
+                <video src="video.mp4" width="1100" height="550" controls></video> 
+            </div>
+          </div>
+        </div>
+        <div class="section section-three" id=3>
+          <div>
+            <div class="firstimg">
+              <img src="1234.png" width="1100" height="550">
+            </div>
+          </div>
+        </div>
+        <div class="section section-four" id=4>
+          <div>
+            <div class="firstimg">
+              <img src="12345.png" width="1100" height="550">
+            </div>
+          </div>
+        </div>
+        <div class="section section-five" id=5>
+          <div>
+            <div class="firstimg">
+              <img src="123456.png" width="1100" height="550">
+            </div>
+          </div>
+        </div>
+      </div>  <!-- End of Content Wrapper -->
+
+  </div>
+ 
+
+  </div>
+  <div class="wiw"> 
+    <div style="text-align:center">
+  <a href="#1"><span class="dot"  id="wiw"></span></a>
+  <a href="#2"><span class="dot" style="margin-left: 10px" id="wiw"></span></a>
+  <a href="#3"><span class="dot" style="margin-left: 10px" id="wiw"></span></a>
+  <a href="#4"><span class="dot" style="margin-left: 10px" id="wiw"></span></a>
+  <a href="#5"><span class="dot" style="margin-left: 10px" id="wiw"></span></a>
+</div>
+  </div>
+  <div id=section2>
+    <div class="pdp" style="margin-top: 100px;"> Here are some fresh news about </div><div class=ra> the environment</div>
+    <div class="container2">
+
+      <div class="card">
+        <div class="imgbx">
+          <img src="chajra.jpg">
+        </div>
+        <div class="content2">
+          <h2 class="h2">By the website "Trees, Water & People"</h2>
+          <p>Forests also play an important part in regulating global climate. Trees remove carbon dioxide, a major greenhouse gas, from the atmosphere, while cycling oxygen back into it. When trees are cut down, however, the CO2 is released again. It is estimated that up to 25% of the total amount of CO2 going into the atmosphere every year is released from trees being cut and burned. It's clear that protecting the world's forests is an important part of solving the global climate change problem. <a href="https://www.treeswaterpeople.org/reforestation.html?gclid=Cj0KCQjwvr6EBhDOARIsAPpqUPGIGHg01JILS3baXEadZE-bTP9h5dvMMsELXLXxzIQB5WA0IxU-WRIaAnkyEALw_wcB">Learn more</a></p>
+        </div>
+      </div>
+
+      <div class="card" id="abc">
+        <div class="imgbx">
+          <img src="bhar.jpg">
+        </div>
+        <div class="content2">
+          <h2 class="h1">By the website"Rare"</h2>
+          <p>In April 2021, during International Earth Week, Rare Brazil, in partnership with Brazil’s Ministry of Science, Technology, and Innovations (MCTI) and UNESCO Brazil, launched the “Ocean Decade in Brazil”  to coincide with the United Nations Decade of Ocean Science for Sustainable Development (2021-2030).</p><a href="https://rare.org/video/launch-of-the-ocean-decade-in-brazil/">Learn more</a>
+        </div>
+      </div>
+
+      <div class="card" id="abc">
+        <div class="imgbx">
+          <img src="thelg.jpg">
+        </div>
+        <div class="content2">
+          <h2 class="h">By The Associated Press</h2>
+          <p>Glaciers are melting faster, losing 31 percent more snow and ice per year than they did 15 years earlier, according to three-dimensional satellite measurements of all the world’s mountain glaciers.
+Scientists blame human-caused climate change.<br><a href="https://www.nbcnews.com/science/environment/satellites-show-worlds-glaciers-melting-faster-ever-rcna791">Learn more  </a></p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imgbx">
+          <img src="3abd.jpg">
+        </div>
+        <div class="content2">
+          <h2 class="h3">Text by Jen Guyton</h2>
+          <p>At the onset of the coronavirus pandemic, with travel restrictions in place worldwide, we launched a new series — <a href="https://www.nytimes.com/column/the-world-through-a-lens?action=click&module=RelatedLinks&pgtype=Article">The World Through a Lens</a> — in which photojournalists help transport you, virtually, to some of our planet’s most beautiful and intriguing places. This week, Jen Guyton shares a collection of images from Mozambique.<a href="https://www.nytimes.com/2021/05/03/travel/mozambique-national-park.html">Learn more</a></p>
+        </div>
+      </div>
+
+       <div class="card" id="abc">
+        <div class="imgbx">
+          <img src="plastique.jpg">
+        </div>
+        <div class="content2">
+          <h2 class="h4">By <a href="https://www.sciencenews.org/author/carmen-drahl" style="color: #DCB239;">Carmen Drahl</a></h2>
+          <p>A pinch of polymer-munching enzymes could make biodegradable plastic packaging and forks truly compostable.<br>
+
+With moderate heat, enzyme-laced films of the plastic <a href="https://www.nature.com/articles/s41586-021-03408-3">disintegrated in standard compost or plain tap water</a> within days to weeks, Ting Xu and her colleagues report April 21 in Nature.<br><a href="https://www.sciencenews.org/article/plastic-compost-new-enzyme-technique-biodegradable">Learn more </a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="section3">
+    <div style="padding-top: 40px; font-size: 60px; font-family: rancho;letter-spacing: 2px; color:#4B7866;">
+      Here are some cool advice
+    </div>
+    <div class="cards1" style="padding-top: 20px;">
+        <div class="card2 card1">
+            <div class="container4">
+                <img src="chajra2.jpg" >
+            </div>
+            <div class="details">
+                <h3>Plant trees</h3>
+                <p> When done well, tree planting is recognised as one of the most engaging, environmentally friendly activities that people can take part in to better the planet. Trees provide a multitude of benefits, both long and short term. As well as being attractive aesthetically, they remove and store carbon from the atmosphere, slow heavy rain and so reduce the risk of flooding, enhance air quality and improve the urban heat island effect by reflecting sunlight and providing shade.</p>
+            </div>
+        </div>
+        <div class="card2 card2">
+            <div class="container4">
+                <img src="bickla.jpg">
+            </div>
+            <div class="details">
+                <h3>Use less cars</h3>
+                <p>Why not carpooling?? Why not using bicycles?? Why not using public transportation instead of using cars?? In fact, using bicycle instead of a car will not improve only your health but also your environment. The gas released from cars will reduce due to the reduction of cars. Indeed, traffic jams won't be a problem because less cars on the road lead to less traffic jams. Last but not least, cars put gas in the air and people breathe in air so you don’t want to breathe in gas.  </p>
+            </div>
+        </div>
+        <div class="card2 card3">
+            <div class="container4">
+                <img src="123.jpg" >
+            </div>
+            <div class="details">
+                <h3>Educate</h3>
+                <p>When you further your own education, you can help others understand the importance and value of our natural ressources</p>
+            </div>
+        </div>
+        <div class="card2 card1">
+            <div class="container4">
+                <img src="3rs.jpg">
+            </div>
+            <div class="details">
+                <h3>Reduce, reuse and recycle</h3>
+                <p> Reduce, Reuse, Recycle – these three 'R' words are an important part of sustainable living, as they help to cut down on the amount of waste we have to throw away. <br>
+It's Really simple!
+<br>Reduce the amount of waste you produce.
+<br>Reuse items as much as you can before replacing them.
+<br>Recycle items wherever possible.
+<br>Using the 3 'R's also helps to minimise the amount of space needed for landfill sites, where waste materials are disposed of.</p>
+            </div>
+    </div>
+  </div>
+   
+  <div id="section5">
+    <div class="container3">
+
+
+      <div class="header">
+        <h1>Our team</h1>
+      </div>
+      <div class="sb-container">
+        <div class="teams">
+          <img src="skander.jpg"class="cercle">
+          <div class="name">Skander Besbes</div>
+          <div class="design">Beginner <br> web-developer </div>
+          <div class="about">An Ariana Pionner Prep <br> school student</div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/skander.besbes.58" class="fbb"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/besbesskan/" class="ig"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+      <div class="sb-container">
+        <div class="teams">
+          <img src="amine.png" class="cercle">
+          <div class="name">Mohamed Amine <br> Messaoudi</div>
+          <div class="design"> Designer </div>
+          <div class="about">An Ariana Pionner Prep <br> school student</div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/amine.messaoudi.27" class="fbb"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/amine.messaoudi_/" class="ig"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      
+        <div class="teams">
+          <img src="salma.jpg" class="cercle">
+          <div class="name">Salma Ben Azouz</div>
+          <div class="design">Writer </div>
+          <div class="about">An Ariana Pionner Prep <br> school student</div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/selma.benazouz.3" class="fbb"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/benazouzsalmaa/" class="ig"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="teams">
+          <img src="ghada.jpg.png"class="cercle">
+          <div class="name">Ghada Jouini</div>
+          <div class="design">Photographer</div>
+          <div class="about">An Ariana Pionner Prep <br> school student</div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/ghada.jouini.10" class="fbb"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/ghada.jouini/" class="ig"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="teams">
+          <img src="malek.png" class="cercle" >
+          <div class="name">Malek Ben Amara<div>
+          <div class="design" style="font-weight: 100; text-transform: capitalize;">Co-Designer </div>
+          <div class="about" style="text-transform:capitalize; ">An Ariana Pionner Prep <br> school student </div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100012621309731" class="fbb"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/malek.ben.amara/" class="ig"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="section6">
+      <div style="font-family: poppins; font-size: 20px; justify-content: center; position: center; color: ">
+        Because we appreciate the effort we wanted to share the music.
+        <br> Credits go to "LOLA" a content creator <br>
+        <div class="social-links">
+          <a href="https://www.youtube.com/channel/UCHqCfQKMDE9KG5m0iw71X0w" class="yt"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div style="font-size: 30px; font-family: italic; font-family: play-fair;">
+          Lyrics:
+        </div>
+          <div style="padding-top: 10px;">
+Ice melts <br>
+Oil spills<br>
+Plastic and trash<br>
+On the streets<br>
+<br>
+Gases fly<br>
+Into the sky<br>
+Polluted air<br>
+Noone cares<br>
+<br>
+Do you hate the land you stand on<br>
+Do you hate the way birds sing<br>
+If your answer to these questions is no<br>
+Then shift your life today<br>
+<br>
+Chorus:<br>
+It doesn’t have to be like this<br>
+It doesn’t have to end like this<br>
+If we do things we’re proud of<br>
+that will show and spread our love and<br>
+<br>
+Any little step forward<br>
+Will encourage others to help fight this<br>
+We’ve got to go and stop this mess <br>
+We have to try and do our best<br>
+<br>
+Impurity<br>
+Of water, air<br>
+Loss of trees<br>
+No fresh breeze<br>
+<br>
+Time goes by<br>
+So quickly<br>
+With it climate changes<br>
+Drastically <br>
+<br>
+Don’t you love gorgeous sunsets<br>
+Don’t you love the sound of the sea<br>
+Don’t you want them to be seen by others<br>
+If so, then stop hurting<br>
+</div>
+        </div>
+    </div>
+
+    </div>
+  <div class=section7> 
+    <section7 >
+        For better experience please use your computer and make the window fullscreen.
+    </section7>
+  </div>
+</body>
+</html>
